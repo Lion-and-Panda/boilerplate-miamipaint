@@ -1,1 +1,1 @@
-"# boilerplate-miamipaint" 
+"# boilerplate-theme" 

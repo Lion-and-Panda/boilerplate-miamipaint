@@ -1,0 +1,23 @@
+{
+  "logger": {
+    "title": "Remote Sync"
+  },
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "miamipaint.lionandpanda.com",
+  "target": "/var/www/vhosts/miami-paint.com/miamipaint.lionandpanda.com/wp-content/themes/lpbuilder-miamipaint",
+  "ignore": [
+    ".remote-sync.json",
+    ".git",
+    "local.sql"
+  ],
+  "username": "miamipaint",
+  "keyfile": "C:\\Users\\lehus\\OneDrive\\Documents\\private.ppk",
+  "watch": [
+    "/includes/css/app.css",
+    "/includes/css/app.css.map",
+    "/includes/css/app.min.css"
+  ],
+  "transport": "scp"
+}
