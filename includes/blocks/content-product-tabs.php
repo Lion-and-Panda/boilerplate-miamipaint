@@ -113,10 +113,26 @@ $tab_content_id = 'tab-content_' . rand();
                   //Column Content
                     $tab_content = get_sub_field( 'tab_content' );
                     $tab_heading = get_sub_field( 'tab_heading' );
+                    $tab_button = get_sub_field('product_link');
+
+                  //Button setup copied from content-hero.php
+                    if ($tab_button) {
+                      $tab_button_target = $tab_button[ 'target' ] ? $tab_button[ 'target' ] : '_self';
+                    }
+
                   ?>
                   <div class="tab-content" data-content="<?= $tab_heading ;?>" aria-hidden="true" role="tabpanel" style="text-align: <?= $content_aligment ;?>">
                     <h4><?= $tab_heading ;?></h4>
                     <?= $tab_content ;?>
+
+
+                    <?php if($tab_button) { ?>
+                    <div class="buttonHolder">
+                      <a class="button" href="<?= $tab_button['url']; ?>" target="<?= esc_attr($tab_button_target); ?>">
+                          <?= esc_html($tab_button['title']); ?>
+                      </a>
+                    </div>
+                    <?php } ?>
                   </div>
                   <?php endwhile; ?>
                   <?php endif; ?>

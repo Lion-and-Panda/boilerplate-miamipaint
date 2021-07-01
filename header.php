@@ -38,6 +38,8 @@ $scripts_body = get_field( 'scripts_body', 'option' );
 <link rel="shortcut icon" href="<?= get_template_directory_uri(); ?>/images/favicon/favicon.ico" />
 
 <!--
+
+test23
                         ,,,         ,,,
                       ;"   ^;     ;'   ",
                       ;    s$$$$$$$s     ;
@@ -138,9 +140,11 @@ $scripts_body = get_field( 'scripts_body', 'option' );
 
             <!--phone number-->
             <?php if($show_phone) { ?>
-              <div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>; color: <?= $phone_num_color ;?>; ">
-                <?= $phone_num ?>
-              </div>
+              <a href="tel:<?= $phone_num ?>">
+                <div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>; color: <?= $phone_num_color ;?>; ">
+                    <?= $phone_num ?>
+                </div>
+              </a>
             <?php } ?>
 
   				  <!--social icons-->

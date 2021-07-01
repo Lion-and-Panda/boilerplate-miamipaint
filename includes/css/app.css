@@ -8222,6 +8222,10 @@ section.is-narrow {
   }
 }
 
+span.is-primary-color {
+  color: #F15523 !important;
+}
+
 .flex {
   display: -webkit-flex;
   display: flex;
@@ -17475,7 +17479,7 @@ ol, ul {
 }
 
 ::selection {
-  background: #cccccc;
+  background: #f47a53;
   color: #fff;
 }
 

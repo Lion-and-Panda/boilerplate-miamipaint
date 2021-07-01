@@ -61,6 +61,10 @@ section.is-narrow {
 	}
 }
 
+span.is-primary-color {
+	color: $primary-color !important;
+}
+
 // group standard WP gutenburg blocks and give the group this class to wrap it in a container with small padding
 .wp-block {
 	@extend .container;
