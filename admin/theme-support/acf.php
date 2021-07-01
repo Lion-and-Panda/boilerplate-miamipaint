@@ -266,6 +266,21 @@ acf_register_block(array(
         ),
 				'mode' 				=> 'edit',
 		));
+		acf_register_block(array(
+			'name'				=> 'product-tabs',
+			'title'				=> __('Product Tabs'),
+			'description'		=> __('Expandable tabs to display vendor products'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'align' 			=> 'wide',
+			'category'			=> 'lpbuilder',
+			'icon'				=> 'block-default',
+			'keywords'			=> array( 'tabs, products' ),
+			'supports'      => array(
+							'align' => 'wide',
+							'anchor' => true
+			),
+			'mode' 				=> 'edit',
+	));
 			acf_register_block(array(
 				'name'				=> 'Accordion',
 				'title'				=> __('Accordion'),

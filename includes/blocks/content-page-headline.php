@@ -58,9 +58,9 @@ $classSpace = 'is-' . $title_spacing;
       <div class="column is-12" style="text-align:  <?php if($title_content_aligment_custom) { echo  $title_content_aligment_custom;  }  else {  echo $title_content_aligment; } ?> ;">
 
         <?php if($title_heading) { ?>
-        <h2 class="headingLarge"  style="font-size: <?= $title_text_size ;?>rem; font-weight: <?= $title_text_weight ;?>; text-transform: <?= $title_text_transform ;?>; color: <?php if($title_color_custom) { echo  $title_color_custom;  }  else {  echo $title_color; } ?> ;">
+        <h1 class="headingLarge"  style="font-size: <?= $title_text_size ;?>rem; font-weight: <?= $title_text_weight ;?>; text-transform: <?= $title_text_transform ;?>; color: <?php if($title_color_custom) { echo  $title_color_custom;  }  else {  echo $title_color; } ?> ;">
           <?= $title_heading ?>
-        </h2>
+        </h1>
         <?php } ?>
 
         <?php if($title_subtitle) { ?>

@@ -79,7 +79,7 @@ $scripts_body = get_field( 'scripts_body', 'option' );
   <a class="skip-link screen-reader-text" tabindex="0" href="#page-content"><?php esc_html_e( 'Skip to content' ); ?> > </a>
 
   <!--main header-->
-  <header id="main" class="headerMain zindex-5" style="background-color:<?= $header_bg ;?>;">
+  <header id="main" class="headerMain <?php if ( is_front_page() ) { ?>is-transparent-nav<?php } ?> zindex-5" style="background-color:<?= $header_bg ;?>;">
       <div class="container">
         <div class="columns is-vcentered">
 
@@ -97,7 +97,7 @@ $scripts_body = get_field( 'scripts_body', 'option' );
       				<?php } ?>
 
       				<!--mobile hamburger menu icon-->
-              <a id="lpbp-menu-trigger" class="navbar-burger burger" href="#0" aria-label="open Mobile navigation">
+              <a id="lpbp-menu-trigger" class="navbar-burger burger" href="#" aria-haspopup="true" aria-expanded="false" aria-label="open Mobile navigation">
                 <i class="fas fa-bars"></i>
               </a>
 
@@ -129,7 +129,9 @@ $scripts_body = get_field( 'scripts_body', 'option' );
     			  <?php if($show_search) { ?>
     				  <div class="topSearch">
       					<form role="search" method="get" class="search-form relative" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                  <label for="search1" class="visually-hidden">Search</label>
       					  <input type="search" id="search1" class="search-field" placeholder="&#xf002;" value="<?php echo get_search_query(); ?>" aria-label="search the site" name="s" />
+                  <input type="submit" id="searchsubmit" class="visually-hidden" value="Search" />
       					</form>
     				  </div>
     			  <?php } ?>

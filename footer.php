@@ -6,7 +6,7 @@ Footer
 //SYTLE
 $footer_logo = get_field( 'footer_logo', 'option' );
 $footer_logo_size = get_field( 'footer_logo_size', 'option' );
-$footer_bg = get_field( 'footer_bg', 'option' ); 
+$footer_bg = get_field( 'footer_bg', 'option' );
 
 //CONTACT INFO STYLE
 $email_size = get_field( 'email_size_footer', 'option' );
@@ -39,58 +39,54 @@ $phone_num = get_field( 'phone_num', 'option' );
 
       <!--logo-->
       <div class="column is-3">
+
         <div class="footerLogo">
           <a class="logo" href="/" title="go to homepage">
            <img src="<?php echo $footer_logo['url']; ?>" alt="<?php echo $footer_logo['alt']; ?>" style="width: <?= $footer_logo_size ;?>;" loading="lazy" />
          </a>
         </div>
-      </div>
 
-      <!--footer menu-->
-      <div class="column is-3">
-        <nav class="footerMenu" aria-label="Footer Menu">
-          <?php wp_nav_menu( array('theme_location' => 'footer_menu', 'depth' => 1, 'container' => false )); ?>
-        </nav>
-      </div>
-
-        <!--contact info-->
-      <div class="column is-3 contactInfo">
-
-          <!--email-->
-          <?php if($show_email) { ?>
-          <div class="email" style="font-size: <?= $email_size ;?>rem; font-weight:<?= $email_weight ;?>;">
-            <a href="mailto:<?= $email ?>" style="color: <?= $email_color ;?>; "><?= $email ?></a>
-          </div>
-          <?php } ?>
-
-          <!--phone number-->
-          <?php if($show_phone) { ?>
-            <div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>;">
-              <a href="tel:<?= $phone_num ?>" style="color: <?= $phone_num_color ;?>;"><?= $phone_num ?></a>
-            </div>
-          <?php } ?>
-
+        <div class="contactInfo">
+          <!--socal icons-->
+          <?php if($show_socialicons) { ?>
+      				<div class="footerSocial">
+      					<?php include('includes/socialconsFooter.php'); ?>
+      			</div>
+            <?php } ?>
           <!--address-->
           <?php if($show_address) { ?>
           <div class="address" style="font-size: <?= $address_size ;?>rem; font-weight:<?= $address_weight ;?>; color: <?= $address_color ;?>; ">
             <?= $address ?>
            </div>
           <?php } ?>
+          <!--phone number-->
+          <?php if($show_phone) { ?>
+            <div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>;">
+              <a href="tel:<?= $phone_num ?>" style="color: <?= $phone_num_color ;?>;"><?= $phone_num ?></a>
+            </div>
+          <?php } ?>
+          <!--email-->
+          <?php if($show_email) { ?>
+          <div class="email" style="font-size: <?= $email_size ;?>rem; font-weight:<?= $email_weight ;?>;">
+            <a href="mailto:<?= $email ?>" style="color: <?= $email_color ;?>; "><?= $email ?></a>
+          </div>
+          <?php } ?>
+        </div>
 
       </div>
 
-    		<!--socal icons-->
-        <?php if($show_socialicons) { ?>
-    			<div class="column is-3">
-    				<div class="footerSocial">
-    					<?php include('includes/socialconsFooter.php'); ?>
-    				</div>
-    			</div>
-          <?php } ?>
+      <!--footer menu-->
+      <div class="column is-3 is-offset-1-desktop">
+        <nav class="footerMenu" aria-label="Footer Menu">
+          <?php wp_nav_menu( array('theme_location' => 'footer_menu', 'depth' => 1, 'container' => false )); ?>
+        </nav>
+      </div>
+
+
 
           <div class="column is-12">
             <div id="copyright">
-              <p class="text-centered small-paragraph">Copyright© <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?></p>
+              <p class="text-centered small-paragraph">Copyright © <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?></p>
             </div>
           </div>
 

@@ -60,10 +60,27 @@ $title_text_transform = get_field( 'title_text_transform', 'option' );
     <div id="postFeed" class="column is-9">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-        <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-          <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-          <?php the_excerpt(); ?>
-        </div>
+				<div class="columns">
+					<?php
+					$thumbnail_id  = get_post_thumbnail_id( $post->ID );
+				  $thumbnail_alt = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
+					?>
+
+					<?php if(has_post_thumbnail()) { ?>
+						<div class="column is-2">
+							<img src="<?php echo the_post_thumbnail_url() ?>" alt="<?php echo $thumbnail_alt ?>" loading="lazy"/>
+						</div>
+					<?php } ?>
+
+					<div class="column <?php if(has_post_thumbnail()) {?> is-10 <?php } else { ?> is-12 <?php } ?>">
+						<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+							<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+							<?php the_excerpt(); ?>
+							<p><a href="<?php the_permalink(); ?>" class="visually-hidde">Read <?php the_title(); ?></a></p>
+						</div>
+					</div>
+
+			</div>
 
       <?php endwhile; ?>
 
@@ -83,10 +100,12 @@ $title_text_transform = get_field( 'title_text_transform', 'option' );
     </div>
 
     <!--blog sidebar-->
-		<aside class="column is-3 blogSidebar">
+		<aside class="column is-3">
+			<div class="blogSidebar">
         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("sidebar-main") ) : ?>
         <?php endif;?>
-	</aside>
+			</div>
+		</aside>
 
   </div>
 </div>

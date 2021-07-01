@@ -4,22 +4,21 @@
 
 .button {
 	transition: $transition-regular;
-  background: transparent !important;
-  border-width: 2px;
-  border-color: $black;
+  background: $transparent;
+  border-width: 1px;
+  border-color: $primary-color;
 	font-family:  $primary-font;
-  color:  $black;
+  color:  $primary-color;
   font-weight: $Bold;
   padding: 8px 30px !important;
   font-size: .8rem;
   text-transform: uppercase;
-  border-radius: 20px;
+  border-radius: $border-radius;
 
 	&:hover {
 		cursor: pointer;
-    border-color: $black !important;
-		transform: translateY(-2px);
-		box-shadow: $box-shadow;
+		background: linear-gradient(to right, $color-1 , $color-6);
+		color: $white !important;
 	}
 
 	&//Button sizes
@@ -48,12 +47,10 @@
 //inverted button
 .inverted {
     .button {
-        background: $white !important;
-        color: $font-color !important;
         border-color: $white !important;
+        color:$white !important;
 
         &:hover {
-            background: $white-darken !important;
         }
     }
 }

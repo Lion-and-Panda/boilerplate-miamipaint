@@ -122,7 +122,7 @@ myCarousel.each(function() {
 
             <!--individual logo slides-->
             <?php if($logo_link) { ?>
-              <a href="<?= $logo_link['url']; ?>" target="<?= esc_attr($logo_link); ?>">
+              <a href="<?= $logo_link['url']; ?>" target="<?= esc_attr($logo_link); ?>" aria-label="visit our client's website">
               <?php } ?>
             <img src="<?php echo $logo_image['url']; ?>" alt="<?php echo esc_attr($logo_image['alt']); ?>" loading="lazy" />
             <?php if($logo_link) { ?>

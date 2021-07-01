@@ -87,7 +87,7 @@ jQuery(document).ready(function( $ ) {
                 $tab_content = get_sub_field( 'tab_content' );
                 ?>
                 <div class="card is-fullwidth accordion-toggle-li-<?php echo $i;?>">
-                    <header class="card-header accordion-toggle-<?php echo $i;?>" role="button" aria-expanded="false" aria-controls="<?= $tab_heading ?>">
+                    <header class="card-header accordion-toggle-<?php echo $i;?>" aria-expanded="false" aria-controls="<?= $tab_heading ?>">
                         <h4><?= $tab_heading ?></h4>
                         <a href="#" onclick="return false;" title="open accordion tab" class="card-header-icon card-toggle"><i class="fa fa-angle-down"></i></a>
                     </header>

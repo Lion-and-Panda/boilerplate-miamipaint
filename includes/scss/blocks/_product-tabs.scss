@@ -1,0 +1,50 @@
+/*-----------------------------------------------------------------------------------*/
+/*	Product Tabs
+/*-----------------------------------------------------------------------------------*/
+
+.productTabs {
+
+  .brandLogo {
+    width: 100%;
+    height: auto;
+  }
+
+  .productTab {
+    border: solid 1px lighten($black,70%);
+    border-radius: $border-radius;
+
+    .tabs  {
+      overflow: hidden;
+      display: block;
+
+      ul {
+        display: block;
+
+        li {
+          border: none;
+          background: $primary-color;
+          margin: 5px 0px;
+          font-weight: $Regular;
+          line-height: 1.25rem;
+          text-align: center;
+
+          a {
+            color: $white;
+            display: block;
+            white-space: break-spaces;
+          }
+
+          &:nth-child(even) {
+            background: $color-2;
+          }
+
+          &.is-active a{
+            font-weight: $Black;
+          }
+        }
+      }
+
+    }
+  }
+
+}

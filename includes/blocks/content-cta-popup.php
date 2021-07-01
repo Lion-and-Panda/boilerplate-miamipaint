@@ -82,7 +82,7 @@ $classSpace = 'is-' . $block_spacing;
 
     					<div class="column <?php if($button_right) {?> is-5 <?php } else { ?> is-12 <?php } ?> ">
                 <div class="cta-button" style="text-align: <?= $button_aligment ;?>;">
-                  <button class="button modal-button" href="" onclick="return false;" aria-haspopup="true" data-target = "#<?= $popup_id ;?>" style="background: <?= $button_bg ;?> ; color: <?= $button_text_color ;?> ; padding: <?= $button_padding ;?>px; font-size: <?= $button_text_size ;?>rem; font-weight: <?= $button_text_weight ;?>; text-transform: <?= $button_text_transform ;?>; border: solid <?= $button_border_size ;?>px <?= $button_border_color ;?>; border-radius: <?= $button_radius ;?>px; ">
+                  <button class="button modal-button" onclick="return false;" aria-haspopup="true" data-target = "#<?= $popup_id ;?>" style="background: <?= $button_bg ;?> ; color: <?= $button_text_color ;?> ; padding: <?= $button_padding ;?>px; font-size: <?= $button_text_size ;?>rem; font-weight: <?= $button_text_weight ;?>; text-transform: <?= $button_text_transform ;?>; border: solid <?= $button_border_size ;?>px <?= $button_border_color ;?>; border-radius: <?= $button_radius ;?>px; ">
                     <?php if ($cta_button_text) {
                       echo $cta_button_text;
                     } else {
@@ -112,6 +112,6 @@ $classSpace = 'is-' . $block_spacing;
         <?= $popup_content ;?>
      </div>
    </div>
-   <button class = "modal-close" aria-label = "close the popup"></button>
+   <button class = "modal-close" aria-label="close the popup"></button>
 </div>
 <!-- End Popup CTA -->

@@ -1,6 +1,14 @@
 /*-----------------------------------------------------------------------------------*/
 /*	Base css
 /*-----------------------------------------------------------------------------------*/
+
+//home page only styles
+.home {
+	#wrapper {
+		margin-top: 0px; //place content under header
+	}
+}
+
 html, body {
 	height: 100%;
 }
@@ -13,7 +21,6 @@ html {
 }
 
 body {
-	letter-spacing: 0.04em;
 	margin: 0;
 	color: $font-color;
 	font: $Regular 16px/2em $primary-font;
@@ -261,7 +268,7 @@ padding: $padding-flat ;
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: .8;
+  opacity: .85;
 }
 
 // bring all content above overlays
@@ -386,6 +393,18 @@ padding: $padding-flat ;
 	&:focus-visible {
 		outline: 0 !important;
 	}
+}
+
+//visually hide things so only screen readers will see them
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 a, button, input[type=submit], .modal-content {

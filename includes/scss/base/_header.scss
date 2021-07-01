@@ -1,6 +1,21 @@
 /*-----------------------------------------------------------------------------------*/
 /* Header
 /*-----------------------------------------------------------------------------------*/
+
+// home header style
+.home .headerMain {
+	&.is-transparent-nav {
+		background-color: $transparent !important;
+		transition: $transition-fast;
+		box-shadow: none;
+
+		#mainNavbar a {
+			color: white;
+		}
+
+	}
+}
+
 header {
 		padding: 15px 0px;
     box-shadow: $box-shadow;
@@ -55,14 +70,15 @@ header {
 
 				// dropwdown menu (desktop)
 				.navbar-dropdown {
-					background: $black;
+					background: $white;
+					border-radius: 0px;
+					border-top: solid 4px $primary-color;
 					visibility: hidden;
 					opacity: 0;
 					height: 1px;
 
 					a.navbar-item {
-						color: $white;
-						border-bottom: dotted .5px lighten($black,40%);
+						color: $font-color;
 
 						&:before {
 							display: none;
@@ -125,7 +141,7 @@ header {
 						font-family: $FontAwesome;
 						font-weight: 900;
 						font-display: swap;
-						color: $black;
+						color: $primary-color;
 					}
 
 					&:focus {
@@ -159,7 +175,7 @@ header {
 
   // hamburger menu icon
   .navbar-burger {
-        color: $black-lighten;
+        color: $primary-color;
         font-size: 1.5rem;
         text-align: right;
 
@@ -184,7 +200,7 @@ body.admin-bar {
 
 // change bulma's default dropdown carrot
 .navbar-link:not(.is-arrowless)::after, {
-	border-color: $font-color;
+	border-color: $primary-color;
 }
 
 //fix navbar dropdown in Edge
@@ -196,5 +212,10 @@ body.admin-bar {
 
 //fix bulmas default white background on nav links on is-hover
 a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active {
-	background: transparent;
+	background: $transparent;
+}
+
+//fix menu items getting a white backgroun on hover
+.navbar-item.has-dropdown:focus .navbar-link, .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
+	background-color: $transparent;
 }

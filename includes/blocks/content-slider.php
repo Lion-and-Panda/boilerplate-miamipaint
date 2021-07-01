@@ -65,10 +65,10 @@ $classSpace = 'is-' . $block_spacing;
 </script>
 
 <!--SLIDER-->
-<section id="<?= $section_id; ?>" class="<?= $className; ?> <?php if($narrow) { ?> is-narrow <?php } ?> aria-roledescription="carousel">
+<section id="<?= $section_id; ?>" class="<?= $className; ?> <?php if($narrow) { ?> is-narrow <?php } ?>>
   <div id="slider" class="sliders">
 
-    <ul role="slider" class="slider <?php if($invert) { ?> inverted <?php } ?>">
+    <ul class="slider <?php if($invert) { ?> inverted <?php } ?>">
         <?php if( have_rows('slides') ): ?>
         <?php
         while ( have_rows( 'slides' ) ): the_row();
@@ -89,7 +89,7 @@ $classSpace = 'is-' . $block_spacing;
 
         <!--slide-->
         <li>
-          <div class="slide cover <?= $classSpace ;?>" style="background-image: url(<?= $slide_bg ?>); position: relative;" aria-roledescription="slide">
+          <div class="slide cover <?= $classSpace ;?>" style="background-image: url(<?= $slide_bg ?>); position: relative;">
             <div class="container zindex-2">
               <h2 class="headingLarge"  style="text-align: <?= $headline_aligment ;?>;">
                 <?= $slide_headline ?>

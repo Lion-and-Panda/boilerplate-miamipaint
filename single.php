@@ -12,7 +12,7 @@ Single post page
 	?>
 
   <main id="wrapper"><!-- main -->
-			<div id="page-content" class="main-content" role="main">
+			<div id="page-content" class="main-content">
 				<article itemscope itemtype ="http://schema.org/Article">
 
 					<!--Title-->
@@ -37,10 +37,12 @@ Single post page
 		              </div>
 
 									<!--blog sidebar-->
-									<aside class="column is-3 blogSidebar">
+									<aside class="column is-3">
+										<div class="blogSidebar">
 							        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("sidebar-main") ) : ?>
 							        <?php endif;?>
-								</aside>
+										</div>
+									</aside>
 
 				  </div>
 			  </div>

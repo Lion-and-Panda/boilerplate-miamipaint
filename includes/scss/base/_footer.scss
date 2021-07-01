@@ -3,13 +3,17 @@
 /*-----------------------------------------------------------------------------------*/
 footer {
 
+	.footerLogo {
+		margin-bottom: 30px;
+	}
+
 	.footerMenu {
 
 		li {
 			a {
 				color: $white;
-        font-size: .8rem;
-        font-weight: $Bold;
+        font-size: 1rem;
+        font-weight: $Regular;
         text-transform: none;
         line-height: 1rem;
 
@@ -31,7 +35,8 @@ footer {
 
 // social media icons
 	.footerSocial {
-		text-align: right;
+		text-align: left;
+		margin-bottom: 15px;
 
 		.socIcons li {
 				display: inline-block;
@@ -52,7 +57,7 @@ footer {
 	          width: 50%;
 	      }
 	  }
-		
+
 		.footerMenu, .contactInfo, .footerSocial {
 			text-align: center;
 		}

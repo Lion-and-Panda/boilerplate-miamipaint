@@ -7,7 +7,7 @@ $email = get_field( 'email_address', 'option' );
 $phone_num = get_field( 'phone_num', 'option' );
 
 ?>
-<nav id="lpbp-lateral-nav" aria-hidden="true" >
+<div id="lpbp-lateral-nav" aria-hidden="true" >
 	<!-- menu -->
 	<div class="closing-time clearfix text-right">
 		<a id="lpbp-menu-trigger-close" href="#0" class="is-clicked closing-tim">
@@ -27,18 +27,11 @@ $phone_num = get_field( 'phone_num', 'option' );
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'lpbp-navigation', 'menu_id' => 'main-nav') ); ?>
 	</nav>
 
-	<hr>
-
 <?php if($show_socialicons) { ?>
 	<div class="socialcons">
-		<h4 class="bold">Social</h4>
 		<?php include('socialconsHeader.php'); ?>
 	</div>
   <?php } ?>
-
-	<hr>
-
-	<h4 class="bold">Contact</h4>
 
 	<div class="email">
 		<a href="mailto:<?= $email ?>"><?= $email ?></a>
@@ -51,4 +44,4 @@ $phone_num = get_field( 'phone_num', 'option' );
 		<!--meta links-->
 		<?php wp_nav_menu( array( 'theme_location' => 'meta', 'menu_class' => 'meta-meta', 'menu_id' => 'meta-nav') ); ?>
 
-</nav>
+</div>

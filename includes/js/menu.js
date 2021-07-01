@@ -18,6 +18,7 @@ jQuery(document).ready(function($){
     event.preventDefault();
 
     $lateral_menu_trigger.toggleClass('is-clicked');
+    $lateral_menu_trigger.attr('aria-expanded', 'true');
     $navigation.toggleClass('lateral-menu-is-open');
     $content_wrapper.toggleClass('lateral-menu-is-open').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
       // firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
@@ -38,7 +39,11 @@ jQuery(document).ready(function($){
   $content_wrapper.on('click', function(event){
     if( !$(event.target).is('#lpbp-menu-trigger, #lpbp-menu-trigger span') ) {
       $lateral_menu_trigger.removeClass('is-clicked');
+      $lateral_menu_trigger.attr('aria-expanded', 'false');
       $navigation.removeClass('lateral-menu-is-open');
+      $('#lpbp-lateral-nav').attr("aria-hidden", function (i, attr) {
+          return attr == "true" ? "false" : "true";
+      });
       $content_wrapper.removeClass('lateral-menu-is-open').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
         $('body').removeClass('overflow-hidden');
       });
@@ -61,6 +66,7 @@ jQuery(document).ready(function($){
 
   $("#lpbp-lateral-nav a.closing-tim").click(function(e){
     $lateral_menu_trigger.removeClass('is-clicked');
+    $lateral_menu_trigger.attr('aria-expanded', 'false');
     $navigation.removeClass('lateral-menu-is-open');
     $content_wrapper.removeClass('lateral-menu-is-open').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
       $('body').removeClass('overflow-hidden');
@@ -115,6 +121,27 @@ jQuery(document).ready(function($){
   $(window).scroll(function(){
       if ($(this).scrollTop() < 50) {
          $('.headerMain').removeClass('is-hidden-nav');
+      }
+  });
+});
+
+//make the header transparent on homepage
+  $(document).ready(function() {
+    //change to the white version of the logo on the homepage on page load
+    $('.home header.headerMain .logo img').attr('src','/wp-content/themes/lpbuilder-miamipaint/images/mp-logo-white.svg');
+    $('.home header.headerMain').addClass('is-transparent-nav');
+  $(window).scroll(function(){
+      if ($(this).scrollTop() < 20) {
+        //make homepage header transparent when less than 20px from the top of the window
+         $('.headerMain').addClass('is-transparent-nav');
+         //swap to the white version of the lgoo on the homepage when less than 20px from the top of the window
+         $('.home header.headerMain .logo img').attr('src','/wp-content/themes/lpbuilder-miamipaint/images/mp-logo-white.svg');
+      }
+      if ($(this).scrollTop() > 20) {
+        //remove transparency from homepage header when more than 20px from the top of the window
+         $('.headerMain').removeClass('is-transparent-nav');
+         //swap to the color version of the lgoo on the homepage when more than 20px from the top of the window
+         $('.home header.headerMain .logo img').attr('src','/wp-content/uploads/2019/06/mpe-logo.svg');
       }
   });
 });

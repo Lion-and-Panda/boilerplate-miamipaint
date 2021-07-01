@@ -1,13 +1,29 @@
 /*-----------------------------------------------------------------------------------*/
 /*	Hero Block
 /*-----------------------------------------------------------------------------------*/
+
+//home hero
+.home .hero {
+  padding: 200px 0px;
+
+  @include MQ(SM) {
+    padding: 100px 0px;
+  }
+}
+
 .hero {
   @include coverBackgound;
 
+  h1 {
+    span {
+      font-weight: $Light;
+    }
+  }
+
   .sub-title {
     color: $font-color;
-    font-size: 1rem;
-		line-height: 1.25rem;
+    font-size: 1.5rem;
+		line-height: 1.75rem;
     font-weight: $Regular;
     margin-bottom: 30px;
   }
@@ -28,18 +44,23 @@
     .button {
 
       &:first-of-type {
-        color: $font-color !important;
-        border: solid 2px $font-color !important;
 
         &:hover {
+          background: linear-gradient(to right, $color-1 , $color-6) !important;
+      		color: $white !important;
         }
       }
 
       &:last-of-type {
-        background-color: $font-color !important;
+        background: $transparent !important;
         color: $white !important;
-        border: solid 2px $font-color !important;
-          }
+        border-color: $white !important;
+
+        &:hover {
+          background: $white !important;
+          color: $primary-color !important;
+        }
+        }
     }
 
   		.button {
@@ -126,13 +147,11 @@
 
   .button {
   &:first-of-type {
-    background-color: transparent !important;
+    background: transparent !important;
     color: $primary-color !important;
-    border: solid 2px $primary-color !important;
+    border-color: $primary-color !important;
 
     &:hover {
-      border-color: $primary-color-darken !important;
-      color: $primary-color-darken !important;
     }
   }
 

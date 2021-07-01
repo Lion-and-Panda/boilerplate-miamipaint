@@ -5,8 +5,8 @@
   "uploadOnSave": true,
   "useAtomicWrites": false,
   "deleteLocal": false,
-  "hostname": "miamipaint.lionandpanda.com",
-  "target": "/var/www/vhosts/miami-paint.com/miamipaint.lionandpanda.com/wp-content/themes/lpbuilder-miamipaint",
+  "hostname": "dev.lionandpanda.com",
+  "target": "/var/www/vhosts/miami-paint.com/miamipaint.lionandpanda.com/wp-content/themes/boilerplate-miamipaint",
   "ignore": [
     ".remote-sync.json",
     ".git",
