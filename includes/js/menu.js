@@ -130,6 +130,12 @@ jQuery(document).ready(function($){
     //change to the white version of the logo on the homepage on page load
     $('.home header.headerMain .logo img').attr('src','/wp-content/themes/lpbuilder-miamipaint/images/mp-logo-white.svg');
     $('.home header.headerMain').addClass('is-transparent-nav');
+    if ($(this).scrollTop() > 20) {
+      //make homepage header transparent when less than 20px from the top of the window
+       $('.headerMain').removeClass('is-transparent-nav');
+       //swap to the white version of the lgoo on the homepage when less than 20px from the top of the window
+       $('.home header.headerMain .logo img').attr('src','/wp-content/uploads/2019/06/mpe-logo.svg');
+    }
   $(window).scroll(function(){
       if ($(this).scrollTop() < 20) {
         //make homepage header transparent when less than 20px from the top of the window
