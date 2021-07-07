@@ -105,7 +105,7 @@ $classSpace = 'is-' . $block_spacing;
 </section>
 
 <!--Modal-->
-<div id = "<?= $popup_id ;?>" class="modal" aria-modal="true" aria-hidden="true" role="dialog">
+<section id = "<?= $popup_id ;?>" class="modal" aria-modal="true" aria-hidden="true" role="dialog">
    <div class = "modal-background"></div>
    <div class = "modal-content" tabindex="0">
      <div class = "box">
@@ -113,5 +113,5 @@ $classSpace = 'is-' . $block_spacing;
      </div>
    </div>
    <button class = "modal-close" aria-label="close the popup"></button>
-</div>
+</section>
 <!-- End Popup CTA -->

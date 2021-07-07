@@ -88,7 +88,7 @@ jQuery(document).ready(function( $ ) {
                 ?>
                 <div class="card is-fullwidth accordion-toggle-li-<?php echo $i;?>">
                     <header class="card-header accordion-toggle-<?php echo $i;?>" aria-expanded="false" aria-controls="<?= $tab_heading ?>">
-                        <h4><?= $tab_heading ?></h4>
+                        <h3><?= $tab_heading ?></h3>
                         <a href="#" onclick="return false;" title="open accordion tab" class="card-header-icon card-toggle"><i class="fa fa-angle-down"></i></a>
                     </header>
                     <div class="card-content is-hidden accordion-content-<?php echo $i;?>" aria-hidden="true" role="region" aria-labelledby="<?= $tab_heading ?>">

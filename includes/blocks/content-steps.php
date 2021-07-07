@@ -68,10 +68,10 @@ $classSpace = 'is-' . $content_spacing;
       ?>
       <div class="column">
         <div class="stepsCol <?php if($column_dropshadow ) { ?> dropshadow <?php } ?>" <?php if($column_background ) { ?>  style="padding: 15px; background: <?= $column_background_color ;?>; border-radius: <?= $column_border_radius ;?>px ;" <?php } ?> >
-          <h4 style="text-align: <?= $headline_aligment ;?>;">Step <?php echo $step; ?></h4>
-          <h3 style="text-align: <?= $headline_aligment ;?>;">
+          <h3 style="text-align: <?= $headline_aligment ;?>;">Step <?php echo $step; ?></h3>
+          <h4 style="text-align: <?= $headline_aligment ;?>;">
             <?= $column_headline ;?>
-          </h3>
+          </h4>
             <hr>
           <div class="body-copy" style="text-align: <?= $content_aligment ;?>;" >
             <?= $column_content ;?>

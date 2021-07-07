@@ -147,7 +147,7 @@ $popup_content = get_sub_field('popup_content');
 ?>
 
 <!--Modal-->
-<div class="relative">
+<section class="relative">
   <div id = "<?= $popup_id ;?>" class = "modal" aria-modal="true" aria-hidden="true" role="dialog">
      <div class = "modal-background"></div>
      <div class = "modal-content" tabindex="0">
@@ -157,7 +157,7 @@ $popup_content = get_sub_field('popup_content');
      </div>
      <button class = "modal-close" aria-label = "close the modal"></button>
   </div>
-</div>
+</section>
 
 <?php endwhile; ?>
 <?php endif; ?>
