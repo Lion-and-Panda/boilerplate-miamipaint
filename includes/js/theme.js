@@ -8,6 +8,8 @@ jQuery(document).ready(function($){
      $("html").addClass("is-clipped");
      //add the active class to the modal to make it visible
      $(target).addClass("is-active");
+     //move focus into modal
+     $(target).children(".modal-content").focus();
      //changes the aria-hidden value of the modal from true to fasle
      $(target).attr('aria-hidden', 'false');
   });
