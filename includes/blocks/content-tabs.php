@@ -100,9 +100,6 @@ $tab_content_id = 'tab-content_' . rand();
 
              </div>
 
-
-             <div class="tabs" id="<?= $tab_id ?>">
-
   </div><!--end columns-->
   </div><!--end container-->
 
