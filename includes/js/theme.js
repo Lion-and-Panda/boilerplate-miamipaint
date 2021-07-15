@@ -20,6 +20,8 @@ jQuery(document).ready(function($){
      $(this).parent().removeClass("is-active");
      //changes the aria-hidden value of the modal from false to true
      $(this).parent().attr('aria-hidden', 'true');
+     //return focus to button
+     $(this).parent().parent().find('.modal-button').focus();
   });
   //close the modal by clicking outside the modal itself
   jQuery(".modal-background").click(function() {
