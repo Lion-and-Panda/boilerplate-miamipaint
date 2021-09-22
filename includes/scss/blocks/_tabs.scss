@@ -40,4 +40,12 @@
   .tabsPanel {
     margin: 25px 0px;
   }
+
+  .tab-content {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
 }

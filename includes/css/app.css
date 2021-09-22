@@ -18968,6 +18968,12 @@ img.mfp-img {
 .tabHolder .tabsPanel {
   margin: 25px 0px;
 }
+.tabHolder .tab-content {
+  display: none;
+}
+.tabHolder .tab-content.is-active {
+  display: block;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*	Product Tabs
