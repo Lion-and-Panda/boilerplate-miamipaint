@@ -10,6 +10,9 @@ footer {
 	.footerMenu {
 
 		li {
+			display: inline-block;
+			margin-right: 10px;
+			
 			a {
 				color: $white;
         font-size: 1rem;

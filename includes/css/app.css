@@ -8935,6 +8935,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 footer .footerLogo {
   margin-bottom: 30px;
 }
+footer .footerMenu li {
+  display: inline-block;
+  margin-right: 10px;
+}
 footer .footerMenu li a {
   color: #fff;
   font-size: 1rem;
@@ -17502,6 +17506,7 @@ em {
 
 strong, b {
   font-weight: 700;
+  color: inherit;
 }
 
 blockquote {
@@ -18882,6 +18887,11 @@ img.mfp-img {
     background-color: #C32034;
   }
 }
+.slider-featuredwork .slider-nav {
+  height: 400px;
+  padding: 50px 0px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	Logo Slider
 /*-----------------------------------------------------------------------------------*/
@@ -18930,37 +18940,33 @@ img.mfp-img {
 .tabHolder {
   position: relative;
 }
-.tabHolder .tabs ul {
-  border: none;
-}
-@media only screen and (max-width: 650px) {
-  .tabHolder .tabs ul {
-    display: block;
-  }
-}
-.tabHolder .tabs li {
-  background: transparent;
-  border-bottom: solid 1px #F15523;
-  padding: 10px 15px;
-  font-size: 1rem;
-  margin-right: 15px;
-}
-.tabHolder .tabs li a {
-  padding: 0px;
-  border: none;
-}
-.tabHolder .tabs li:hover {
-  transition: all 0.5s ease-in-out;
-}
-.tabHolder .tabs li.is-active a {
-  color: inherit;
-  font-weight: 700;
-}
-.tabHolder .tab-content {
-  display: none;
-}
-.tabHolder .tab-content.is-active {
+.tabHolder .tabsBlock {
   display: block;
+}
+.tabHolder .tabsBlock button {
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  padding: 15px;
+}
+.tabHolder .tabsBlock [role=tab]:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d43e0d;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.tabHolder .tabsBlock [role=tab][aria-selected=true]:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.tabHolder .tabsPanel {
+  margin: 25px 0px;
 }
 
 /*-----------------------------------------------------------------------------------*/

@@ -37,9 +37,20 @@ $phone_num = get_field( 'phone_num', 'option' );
 		<a href="mailto:<?= $email ?>"><?= $email ?></a>
 	</div>
 
-    <div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>; ">
-      <a href="tel:<?= $phone_num ?>" style="color: <?= $phone_num_color ;?>;"><?= $phone_num ?></a>
-    </div>
+		<!--phone number-->
+		<?php if($show_phone) { ?>
+			<a href="tel:<?= $phone_num_cini ?>">
+				<div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>; ">
+						Cincinnati: <?= $phone_num_cini ?>
+				</div>
+			</a>
+
+			<a href="tel:<?= $phone_num_indi ?>">
+				<div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>; ">
+						Indianapolis: <?= $phone_num_indi ?>
+				</div>
+			</a>
+		<?php } ?>
 
 		<!--meta links-->
 		<?php wp_nav_menu( array( 'theme_location' => 'meta', 'menu_class' => 'meta-meta', 'menu_id' => 'meta-nav') ); ?>

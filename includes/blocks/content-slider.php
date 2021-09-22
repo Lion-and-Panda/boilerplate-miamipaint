@@ -65,7 +65,7 @@ $classSpace = 'is-' . $block_spacing;
 </script>
 
 <!--SLIDER-->
-<section id="<?= $section_id; ?>" class="<?= $className; ?> <?php if($narrow) { ?> is-narrow <?php } ?>>
+<section id="<?= $section_id; ?>" class="<?= $className; ?> <?php if($narrow) { ?> is-narrow <?php } ?>">
   <div id="slider" class="sliders">
 
     <ul class="slider <?php if($invert) { ?> inverted <?php } ?>">

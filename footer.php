@@ -27,9 +27,10 @@ $show_phone = get_field( 'show_phone_footer', 'option' );
 
 //CONTACT INFO
 $email = get_field( 'email_address', 'option' );
-$address = get_field( 'address', 'option' );
-$phone_num = get_field( 'phone_num', 'option' );
-
+$address_cinci = get_field( 'address_cinci', 'option' );
+$address_indi = get_field( 'address_indi', 'option' );
+$phone_num_cinci = get_field( 'phone_num_cinci', 'option' );
+$phone_num_indi = get_field( 'phone_num_indi', 'option' );
 ?>
 
 <!--FOOTER-->
@@ -38,7 +39,7 @@ $phone_num = get_field( 'phone_num', 'option' );
     <div class="columns is-multiline">
 
       <!--logo-->
-      <div class="column is-3">
+      <div class="column is-2">
 
         <div class="footerLogo">
           <a class="logo" href="/" title="go to homepage">
@@ -46,43 +47,74 @@ $phone_num = get_field( 'phone_num', 'option' );
          </a>
         </div>
 
-        <div class="contactInfo">
-          <!--socal icons-->
-          <?php if($show_socialicons) { ?>
-      				<div class="footerSocial">
-      					<?php include('includes/socialconsFooter.php'); ?>
-      			</div>
-            <?php } ?>
-          <!--address-->
-          <?php if($show_address) { ?>
-          <div class="address" style="font-size: <?= $address_size ;?>rem; font-weight:<?= $address_weight ;?>; color: <?= $address_color ;?>; ">
-            <?= $address ?>
-           </div>
-          <?php } ?>
-          <!--phone number-->
-          <?php if($show_phone) { ?>
-            <div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>;">
-              <a href="tel:<?= $phone_num ?>" style="color: <?= $phone_num_color ;?>;"><?= $phone_num ?></a>
-            </div>
-          <?php } ?>
-          <!--email-->
-          <?php if($show_email) { ?>
-          <div class="email" style="font-size: <?= $email_size ;?>rem; font-weight:<?= $email_weight ;?>;">
-            <a href="mailto:<?= $email ?>" style="color: <?= $email_color ;?>; "><?= $email ?></a>
-          </div>
-          <?php } ?>
-        </div>
-
       </div>
 
       <!--footer menu-->
-      <div class="column is-3 is-offset-1-desktop">
+      <div class="column is-8">
         <nav class="footerMenu" aria-label="Footer Menu">
           <?php wp_nav_menu( array('theme_location' => 'footer_menu', 'depth' => 1, 'container' => false )); ?>
         </nav>
       </div>
 
+      <!--social media-->
+      <div class="column is-12-mobile is-2-desktop">
+        <div class="contactInfo">
+          <!--socal icons-->
+          <?php if($show_socialicons) { ?>
+              <div class="footerSocial">
+                <?php include('includes/socialconsFooter.php'); ?>
+            </div>
+            <?php } ?>
 
+        </div>
+      </div>
+
+      <!--addresses-->
+      <div class="column is-3">
+        <?php if($show_address) { ?>
+        <div class="address" style="font-size: <?= $address_size ;?>rem; font-weight:<?= $address_weight ;?>; color: <?= $address_color ;?>; ">
+          <strong>Cincinnati Location</strong><br>
+          <?= $address_cinci ?>
+         </div>
+
+         <!--phone number-->
+         <?php if($show_phone) { ?>
+           <div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>;">
+             <a href="tel:<?= $phone_num_cinci ?>" style="color: <?= $phone_num_color ;?>;"><?= $phone_num_cinci ?></a>
+           </div>
+         <?php } ?>
+        <?php } ?>
+
+      </div>
+
+
+      <!--addresses-->
+      <div class="column is-3">
+        <?php if($show_address) { ?>
+         <div class="address" style="font-size: <?= $address_size ;?>rem; font-weight:<?= $address_weight ;?>; color: <?= $address_color ;?>; ">
+           <strong>Indianapolis  Location</strong><br>
+           <?= $address_indi ?>
+          </div>
+
+          <!--phone number-->
+          <?php if($show_phone) { ?>
+            <div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>;">
+              <a href="tel:<?= $phone_num_indi ?>" style="color: <?= $phone_num_color ;?>;"><?= $phone_num_indi ?></a>
+            </div>
+          <?php } ?>
+
+        <?php } ?>
+
+      </div>
+
+      <div class="column is-12">
+        <!--email-->
+        <?php if($show_email) { ?>
+        <div class="email" style="font-size: <?= $email_size ;?>rem; font-weight:<?= $email_weight ;?>;">
+          <a href="mailto:<?= $email ?>" style="color: <?= $email_color ;?>; "><?= $email ?></a>
+        </div>
+        <?php } ?>
+      </div>
 
           <div class="column is-12">
             <div id="copyright">

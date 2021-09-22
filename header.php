@@ -16,7 +16,8 @@ $show_search = get_field( 'show_search', 'option' );
 $show_socialicons = get_field( 'show_social_icons', 'option' );
 
 //CONTACT INFO
-$phone_num = get_field( 'phone_num', 'option' );
+$phone_num_cini = get_field( 'phone_num_cinci', 'option' );
+$phone_num_indi = get_field( 'phone_num_indi', 'option' );
 $phone_num_size = get_field( 'phone_size', 'option' );
 $phone_num_weight = get_field( 'phone_weight', 'option' );
 $phone_num_color = get_field( 'phone_color', 'option' );
@@ -107,7 +108,7 @@ test23
     		  </div>
 
           <!--menu-->
-          <div class="column is-6-desktop is-hidden-mobile">
+          <div class="column is-5-desktop is-hidden-mobile">
               <nav id="mainNavbar" class="mainNav is-transparent" aria-label="main navigation">
                 <div class="navbar-menu">
                       <?php wp_nav_menu( array(
@@ -125,7 +126,7 @@ test23
           </div>
 
     			<!--search social media icons-->
-          <div class="column is-4-desktop is-hidden-mobile menuIcons">
+          <div class="column is-5-desktop is-hidden-mobile menuIcons">
 
             <!--search-->
     			  <?php if($show_search) { ?>
@@ -140,9 +141,15 @@ test23
 
             <!--phone number-->
             <?php if($show_phone) { ?>
-              <a href="tel:<?= $phone_num ?>">
+              <a href="tel:<?= $phone_num_cini ?>">
                 <div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>; color: <?= $phone_num_color ;?>; ">
-                    <?= $phone_num ?>
+                    Cincinnati: <?= $phone_num_cini ?>
+                </div>
+              </a>
+
+              <a href="tel:<?= $phone_num_indi ?>">
+                <div class="phoneNum" style="font-size: <?= $phone_num_size ;?>rem; font-weight:<?= $phone_num_weight ;?>; color: <?= $phone_num_color ;?>; ">
+                    Indianapolis: <?= $phone_num_indi ?>
                 </div>
               </a>
             <?php } ?>
