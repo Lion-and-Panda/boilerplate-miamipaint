@@ -8305,7 +8305,7 @@ span.is-primary-color {
 }
 
 .is-flat {
-  padding: 0px;
+  padding: 100px 0px 0px 0px;
 }
 
 .is-small, .wp-block {
@@ -18973,6 +18973,10 @@ img.mfp-img {
 }
 .tabHolder .tab-content.is-active {
   display: block;
+}
+
+.tabs ul {
+  border-bottom: none;
 }
 
 /*-----------------------------------------------------------------------------------*/
